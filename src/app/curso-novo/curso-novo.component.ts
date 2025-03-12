@@ -9,14 +9,12 @@ import { CursoService } from '../cursos/curso.service';
   styleUrls: ['./curso-novo.component.css']
 })
 
-export class CursoNovoComponent implements OnInit {
+export class CursoNovoComponent{
 
   curso: Curso = new Curso();
 
   constructor(private cursoService: CursoService,
               private router: Router) { }
-
-  ngOnInit(): void {}
   
   salvar() {
      this.cursoService.createCurso(this.curso).subscribe(
