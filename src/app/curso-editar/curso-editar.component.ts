@@ -13,9 +13,9 @@ export class CursoEditarComponent implements OnInit {
 
   curso: Curso = new Curso();
 
-  constructor(private cursoservice: CursoService,
-              private router: Router,
-              private rotaAtiva: ActivatedRoute) { }
+  constructor(private readonly cursoservice: CursoService,
+              private readonly router: Router,
+              private readonly rotaAtiva: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.getCurso(this.rotaAtiva.snapshot.paramMap.get('id'));
