@@ -13,8 +13,8 @@ export class CursoNovoComponent{
 
   curso: Curso = new Curso();
 
-  constructor(private cursoService: CursoService,
-              private router: Router) { }
+  constructor(private readonly cursoService: CursoService,
+              private readonly router: Router) { }
   
   salvar() {
      this.cursoService.createCurso(this.curso).subscribe(

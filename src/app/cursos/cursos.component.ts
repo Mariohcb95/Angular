@@ -23,7 +23,7 @@ export class CursosComponent implements OnInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
-  constructor(private cursoService: CursoService, private router: Router) { }
+  constructor(private readonly cursoService: CursoService, private readonly router: Router) { }
 
   ngOnInit(): void {
     this.getCursoList();

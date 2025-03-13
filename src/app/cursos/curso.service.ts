@@ -9,8 +9,8 @@ import { Curso } from './curso.model';
 })
 export class CursoService {
 
-  constructor(private httpClient: HttpClient,
-              private _snackBar: MatSnackBar) { }
+  constructor(private readonly httpClient: HttpClient,
+              private readonly _snackBar: MatSnackBar) { }
 
     baseUrl = 'http://localhost:8080/academico/cursos';
     
