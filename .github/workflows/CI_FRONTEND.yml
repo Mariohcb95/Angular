@@ -1,0 +1,26 @@
+name: TESTES FRONT-END
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # Define o sistema operacional
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4  # Baixa o código do repositório
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18  # Defina a versão do Node.js
+
+      - name: Instalar dependências
+        run: npm ci  # Usa 'ci' para builds mais rápidos e reproduzíveis (puxa do arquivo package-lock as dependencias)
+
+      - name: 🔍 Verificar Lint
+        run: npm run lint  # Verifica problemas no código
+
+      - name: SUBIU O CI
+        run: echo "SUBIU O CI FRONT-END"
+
