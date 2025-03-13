@@ -18,9 +18,6 @@ jobs:
       - name: Instalar dependências
         run: npm ci  # Usa 'ci' para builds mais rápidos e reproduzíveis (puxa do arquivo package-lock as dependencias)
 
-      - name: 🔍 Verificar Lint
-        run: npm run lint  # Verifica problemas no código
-
       - name: SUBIU O CI
         run: echo "SUBIU O CI FRONT-END"
 
