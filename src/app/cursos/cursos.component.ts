@@ -18,7 +18,7 @@ export class CursosComponent implements OnInit {
 
   cursoDataSource: MatTableDataSource<Curso> = new MatTableDataSource();
 
-  displayedCursos: String[] = ['idcurso', 'nomecurso', 'update', 'delete'];
+  displayedCursos: string[] = ['idcurso', 'nomecurso', 'update', 'delete'];
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
