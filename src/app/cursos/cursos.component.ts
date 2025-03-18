@@ -68,4 +68,9 @@ export class CursosComponent implements OnInit {
     this.router.navigate([`/curso-editar/${curso.idcurso}`]);
   }
 
+  handleKeyPress(event: KeyboardEvent) {
+    if (event.key === 'Enter' || event.key === ' ') {
+      this.navigateToCursoNovo();
+    }
+  }
 }

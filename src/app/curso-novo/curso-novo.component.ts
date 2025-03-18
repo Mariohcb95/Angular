@@ -30,4 +30,9 @@ export class CursoNovoComponent{
       this.router.navigate(['/cursos']);
   }
 
+  handleKeyPress(event: KeyboardEvent) {
+    if (event.key === 'Enter' || event.key === ' ') {
+      this.salvar();
+    }
+  }
 }
